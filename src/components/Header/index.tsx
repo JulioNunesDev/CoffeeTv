@@ -13,6 +13,7 @@ import epic from "../../assets/companies/epic.svg";
 import steam from "../../assets/companies/steam.svg";
 
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 type T = string;
 
@@ -28,7 +29,7 @@ function HeaderMain() {
       <S.navContainer>
         <S.ulList>
           <S.itemList
-            to="/home"
+            to="/"
             className={activeItem === "home" ? "active" : ""}
             onClick={() => handleItemClick("home")}
           >
@@ -98,6 +99,20 @@ function HeaderMain() {
                 <img src={steam} alt="" />
                 Steam
               </a>
+            </li>
+          </ul>
+          <ul className="list">
+            <li>
+
+            <Link className="login" to='/login'>
+              Login
+            </Link>
+            </li>
+            <li>
+
+            <Link className="login" to='/Register'>
+              Register
+            </Link>
             </li>
           </ul>
         </S.navContainerTwo>

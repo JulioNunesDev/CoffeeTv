@@ -1,5 +1,6 @@
 import { IframeHTMLAttributes } from 'react';
 
+
 // Define una interfaz que extienda las propiedades estándar de un <iframe> y agregue 'frameBorder'.
 interface MyIframeProps extends IframeHTMLAttributes<HTMLIFrameElement> {
   allowfullscreen?: boolean;
@@ -19,6 +20,7 @@ function LiveStream() {
   }
   return (
     <div>
+      
       <iframe {...iframeProps}></iframe>
 <a href="https://www.instagram.com/julionunesyt/" target="_blank">
       <h1>Julio Nunes</h1>

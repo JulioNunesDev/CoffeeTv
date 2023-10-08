@@ -10,22 +10,35 @@ const Styleds = {
     justify-content: center;
     flex-direction: column;
     background-image: url(${logo});
+   
   `,
   navContainer: styled.nav`
-    width: 1200px;
+    max-width: 1200px;
     height: 90px;
     display: flex;
     margin: 0 auto;
     align-items: center;
     justify-content: center;
+    flex-basis: 100px;
+
+    @media screen and (max-width: 768px){
+      ul{
+        display: flex;
+        gap: 15px;
+      }
+    }
+    
   `,
   ulList: styled.ul`
     width: 100%;
     display: flex;
     align-items: center;
     gap: 60px;
-
     justify-content: center;
+
+    @media screen and (max-width: 478px){
+    gap:0;
+    }
   `,
   itemList: styled(Link)`
     color: white;
@@ -56,11 +69,28 @@ const Styleds = {
     align-items: center;
     justify-content: center;
 
+    .list{
+    gap: 10px;
+    margin: 20px;
+    display: block;
+
+    .login{
+        color: #fff;
+        text-decoration: none;
+
+        &:hover{
+          text-decoration: underline;
+          color: var(--color-second);
+        }
+      }
+    }
+
     ul {
       display: flex;
       align-items: center;
-
       gap: 25px;
+
+      
 
       li {
         list-style: none;
