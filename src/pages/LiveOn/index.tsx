@@ -10,18 +10,20 @@ interface MyIframeProps extends IframeHTMLAttributes<HTMLIFrameElement> {
 
 function LiveStream() {
 
+
   const iframeProps: MyIframeProps = {
     width:"100%",
     height:"500",
-    src:"https://www.youtube.com/embed/6BqGBwr8PCo?si=7w7k1NLMxyNceNgm",
+    src:"https://player.twitch.tv/?channel=jacalmeida&parent=localhost",
     title:"YouTube video player",
     allow:"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
-    allowfullscreen: true
+    allowFullScreen: true
   }
   return (
     <div>
       
       <iframe {...iframeProps}></iframe>
+      
 <a href="https://www.instagram.com/julionunesyt/" target="_blank">
       <h1>Julio Nunes</h1>
 
